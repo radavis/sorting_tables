@@ -5,6 +5,11 @@
 //= require_tree .
 
 $(function(){
-  $(".tablesorter").tablesorter();
+  $(".tablesorter").tablesorter({
+    headers: {
+      3: { sorter: false }  // Don't sort the last column
+    }
+  });
+
   $(document).foundation();
 });

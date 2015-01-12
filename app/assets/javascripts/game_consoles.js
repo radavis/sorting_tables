@@ -1,2 +1,7 @@
-// Place all the behaviors and hooks related to the matching controller here.
-// All this logic will automatically be available in application.js.
+$(function(){
+  $(".game-consoles").tablesorter({
+    headers: {
+      3: { sorter: false }  // Don't sort the last column
+    }
+  });
+});
