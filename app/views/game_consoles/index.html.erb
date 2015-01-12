@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Game Consoles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Manufacturer</th>
+      <th>Year</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @game_consoles.each do |game_console| %>
+      <tr>
+        <td><%= game_console.name %></td>
+        <td><%= game_console.manufacturer %></td>
+        <td><%= game_console.year %></td>
+        <td><%= link_to 'Show', game_console %></td>
+        <td><%= link_to 'Edit', edit_game_console_path(game_console) %></td>
+        <td><%= link_to 'Destroy', game_console, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Game console', new_game_console_path %>

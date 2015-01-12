@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @game_console.name %>
+</p>
+
+<p>
+  <strong>Manufacturer:</strong>
+  <%= @game_console.manufacturer %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @game_console.year %>
+</p>
+
+<%= link_to 'Edit', edit_game_console_path(@game_console) %> |
+<%= link_to 'Back', game_consoles_path %>
